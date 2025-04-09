@@ -1,0 +1,26 @@
+post:
+  summary: Login and get JWT token
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - email
+            - password
+          properties:
+            email:
+              type: string
+            password:
+              type: string
+  responses:
+    200:
+      description: JWT token returned
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              token:
+                type: string
