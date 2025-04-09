@@ -1,0 +1,24 @@
+post:
+  tags:
+    - User Operations
+  summary: Register a new user
+  description: Creates a new user account.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            username:
+              type: string
+            password:
+              type: string
+          required:
+            - username
+            - password
+  responses:
+    "201":
+      description: User registered successfully
+    "400":
+      description: Invalid input
